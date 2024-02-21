@@ -6,20 +6,14 @@ const Add = (props) => {
     const description =useRef()
     const rating =useRef()
     const posterURL =useRef()
-const [rate,setRate]=useState(0)
-
+    const [rate,setRate]=useState(0)
   return (
     <div>
         <input ref={title} type="text" />
         <input ref={description} type="text" />
         <input ref={rating} type="text" />
         <input ref={posterURL} type="text" />
-        <StarRatingComponent 
-          name="rate1" 
-          starCount={10}
-          value={rate}
-          onStarClick={(value)=>{setRate (value)}}
-        />
+      
 
 <button onClick={()=>{props.setMovies([...props.movies , {title:title.current.value,
 description:description.current.value,
